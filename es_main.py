@@ -2,14 +2,17 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import es_classes as ec
+import es_func as ef
 
-N_IND = 20
-A = 10
+N_IND = 200
+A = 50
 T_ITER = 1000
 
 AREA = np.zeros((A,A))
-RD =((0,0),(32,32))
-RC =((25,25),(75,75))
+ZONES = ef.set_zones(A)
+RD = ZONES[0][0]
+RL = ZONES[0][1]
+RC = ZONES[0][2]
 
 popul = []
 

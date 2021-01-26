@@ -8,4 +8,6 @@ def set_zones(A):
     RL = ((0,rll),(A-1,A-1))
     RC = ((rcl,rcl),(2*rcl,2*rcl))
     
+    return((RD,RL,RC),())
+    
     
