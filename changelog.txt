@@ -1,0 +1,10 @@
+# Changelog
+
+###############################################################################
+
+#[0.02.1]
+## 2021.02.26 - Moeller
+
+### sir_test_mk1.py
+-Added simulation with an normal random infection time
+-Added simulation with an normal random infection spread
