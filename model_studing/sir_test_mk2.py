@@ -15,7 +15,7 @@ step_size = 0.5
 S = 99999  #susceptible population
 tau = 7*(1/step_size) #infection mean period
 beta = 3/tau  #infection producing contacts per unit time
-mu = (6.9 /(1000*365))*(1/step_size) #death rate
+mu = (6.9*2 /(1000*365))*(1/step_size) #death rate
 delta = (22.7 /(1000*365))*(1/step_size) #birth  rate
 I = 1  #infected
 R = 0  #recovered or dead
@@ -23,7 +23,8 @@ N=S+R+I
 s_pop=[S]
 i_pop=[I]
 r_pop=[R]
-period = int(100*(1/step_size))
+n_pop=[N]
+period = int(3650*(1/step_size))
 time_stamp = np.array(range(period+1))*step_size
 
 np.random.seed(1104)
@@ -41,10 +42,12 @@ for t in range(period):
     i_pop.append(I)
     r_pop.append(R)
     N=S+R+I
+    n_pop.append(N)
 
 fig, ax = plt.subplots()
 ax.set_title("Normal")
 ax.plot(time_stamp,s_pop)
 ax.plot(time_stamp,i_pop)
 ax.plot(time_stamp,r_pop)
+ax.plot(time_stamp,n_pop)
 plt.show()
