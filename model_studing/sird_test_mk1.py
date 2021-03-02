@@ -11,11 +11,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from math import e
 
-step_size = 0.5
+step_size = 0.125
 S = 99999  #susceptible population
-tau = 7*(1/step_size) #infection mean period
+tau = 13*(1/step_size) #infection mean period
 beta = 6/tau  #infection producing contacts per unit time
-mu = 0.1 #death rate by the infection
+mu = 0.1/tau #death rate by the infection
 I = 1  #infected
 R = 0  #recovered
 D = 0 #dead by the infection
@@ -25,7 +25,7 @@ i_pop=[I]
 r_pop=[R]
 d_pop=[D]
 n_pop=[N]
-period = int(400*(1/step_size))
+period = int(800*(1/step_size))
 time_stamp = np.array(range(period+1))*step_size
 
 np.random.seed(1104)
