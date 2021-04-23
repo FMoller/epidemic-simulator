@@ -14,7 +14,7 @@ from math import e
 step_size = 0.125
 S = 99999  #susceptible population
 tau = 13*(1/step_size) #infection mean period
-beta = 6/tau  #infection producing contacts per unit time
+beta = 2/tau  #infection producing contacts per unit time
 mu = 0.1/tau #death rate by the infection
 I = 1  #infected
 R = 0  #recovered
@@ -25,7 +25,7 @@ i_pop=[I]
 r_pop=[R]
 d_pop=[D]
 n_pop=[N]
-period = int(800*(1/step_size))
+period = int(3200*(1/step_size))
 time_stamp = np.array(range(period+1))*step_size
 
 np.random.seed(1104)
