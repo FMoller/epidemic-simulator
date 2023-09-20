@@ -15,9 +15,6 @@ from math import e
 
 
 def main(argv):
-    print(argv)
-
-if __name__ == "__main__":
     """
     Arguments:
     0 - Susceptivle pop , 1 - Infected pop, 2 - Recovered pop
@@ -27,4 +24,7 @@ if __name__ == "__main__":
     6 - Output file CSV
     7 - Output file graph
     """
-    main(sys.argv[1:])
+    args = sys.argv
+
+if __name__ == "__main__":
+    main()
