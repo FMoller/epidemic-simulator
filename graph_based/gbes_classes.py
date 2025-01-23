@@ -1,3 +1,4 @@
+import numpy as np
 """
 Epidemic simulator classes
 
@@ -15,6 +16,9 @@ class node:
         self.pattern_matrix = pattern_matrix
         self.connections = connections
         self.next_to_center = n2c
+        self.population  = 0 #mudar, colocar como vetor
+        self.density = 0
+        
 
 class p_matrix:
     pass
